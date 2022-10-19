@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix && prettier --write \"**/*.js\" \"**/*.json\""
+    "lint": "eslint \"**/*.js\" --fix && prettier --write \"**/*.js\" \"**/*.json\"",
+    "prepare": "cd .. && husky install lab-1/.husky"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "eslint": "^8.25.0",
     "eslint-plugin-sonarjs": "^0.16.0",
+    "husky": "^8.0.1",
     "prettier": "^2.7.1"
   }
 }
