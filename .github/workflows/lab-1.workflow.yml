@@ -1,0 +1,25 @@
+name: lab-1
+
+on:
+  push:
+    branches: [lab-1]
+    paths:
+      - 'lab-1/**'
+
+defaults:
+  run:
+    working-directory: lab-1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm i
+      - name: Lint
+        run: npm run lint
