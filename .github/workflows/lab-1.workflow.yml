@@ -12,7 +12,7 @@ defaults:
 
 env:
   AZURE_FUNCTIONAPP_NAME: lab-1-node-js-artem-matiushenko
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: ./function
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './function'
 
 jobs:
   build:
