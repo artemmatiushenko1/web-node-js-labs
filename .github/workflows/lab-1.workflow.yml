@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '16.x'
       - name: Install dependencies
-        run: npm сi
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Deploy Azure function
