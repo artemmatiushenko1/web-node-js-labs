@@ -86,7 +86,6 @@
     "no-whitespace-before-property": ["error"],
     "object-curly-spacing": ["error", "always"],
     "operator-assignment": ["error", "always"],
-    "operator-linebreak": ["error", "after"],
     "semi-spacing": [
       "error",
       {
@@ -98,7 +97,6 @@
     "space-before-function-paren": [
       "error",
       {
-        "anonymous": "never",
         "named": "never",
         "asyncArrow": "always"
       }

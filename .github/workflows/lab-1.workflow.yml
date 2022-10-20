@@ -10,6 +10,10 @@ defaults:
   run:
     working-directory: lab-1
 
+env:
+  AZURE_FUNCTIONAPP_NAME: lab-1-node-js-artem-matiushenko
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: ./function
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +24,12 @@ jobs:
         with:
           node-version: '16.x'
       - name: Install dependencies
-        run: npm i
+        run: npm сi
       - name: Lint
         run: npm run lint
+      - name: Deploy Azure function
+        uses: Azure/functions-action@v1
+        with:
+          app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}

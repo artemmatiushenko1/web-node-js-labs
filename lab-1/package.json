@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "func start ./function",
     "lint": "eslint \"**/*.js\" --fix && prettier --write \"**/*.js\" \"**/*.json\"",
     "prepare": "cd .. && husky install lab-1/.husky"
   },
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "azurefunctions": "^2.0.0",
     "eslint": "^8.25.0",
     "eslint-plugin-sonarjs": "^0.16.0",
     "husky": "^8.0.1",
