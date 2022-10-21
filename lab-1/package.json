@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "func start ./function",
-    "lint": "eslint \"**/*.js\" --fix && prettier --write \"**/*.js\" \"**/*.json\"",
+    "lint:check": "eslint \"**/*.js\" && prettier --check \"**/*.js\" \"**/*.json\"",
+    "lint:fix": "eslint \"**/*.js\" --fix && prettier --write \"**/*.js\" \"**/*.json\"",
     "prepare": "cd .. && husky install lab-1/.husky"
   },
   "keywords": [],

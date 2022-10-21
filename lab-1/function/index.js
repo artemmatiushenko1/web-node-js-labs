@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = async function (context) {
+module.exports = async (context) => {
   context.log('JavaScript HTTP trigger function processed a request.');
 
   const data = {
