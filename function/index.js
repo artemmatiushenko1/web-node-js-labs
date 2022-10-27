@@ -5,6 +5,7 @@ export default async (context) => {
     firstName: 'Artem',
     lastName: 'Matiushenko',
     group: 'IP-04',
+    city: 'Kyiv',
   };
 
   context.res = {
