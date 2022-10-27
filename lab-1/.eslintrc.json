@@ -6,7 +6,8 @@
   "plugins": ["sonarjs"],
   "extends": ["eslint:recommended", "plugin:sonarjs/recommended", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "globals": {
     "BigInt": true

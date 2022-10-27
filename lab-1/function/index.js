@@ -1,10 +1,9 @@
-'use strict';
-
-module.exports = async (context) => {
+export default async (context) => {
   context.log('JavaScript HTTP trigger function processed a request.');
 
   const data = {
-    name: 'Artem',
+    firstName: 'Artem',
+    lastName: 'Matiushenko',
     group: 'IP-04',
   };
 
