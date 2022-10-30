@@ -1,0 +1,26 @@
+{
+  "name": "lab-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "func start ./function",
+    "eslint:check": "eslint --ignore-path .gitignore \"**/*.js\"",
+    "eslint:fix": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
+    "prettier:check": "prettier --check . --ignore-path .gitignore",
+    "prettier:fix": "prettier --write . --ignore-path .gitignore",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "azurefunctions": "^2.0.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-sonarjs": "^0.16.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
