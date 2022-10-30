@@ -8,8 +8,8 @@
     "start": "func start ./function",
     "eslint:check": "eslint --ignore-path .gitignore \"**/*.js\"",
     "eslint:fix": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
-    "prettier:check": "prettier --check \"**/*.js\" \"**/*.json\"",
-    "prettier:fix": "prettier --write \"**/*.js\" \"**/*.json\"",
+    "prettier:check": "prettier --check . --ignore-path .gitignore",
+    "prettier:fix": "prettier --write . --ignore-path .gitignore",
     "prepare": "husky install"
   },
   "keywords": [],
