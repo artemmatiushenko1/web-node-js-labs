@@ -1,5 +1,5 @@
 export default async (context) => {
-  context.log('JavaScript HTTP trigger function processed a request.');
+  context.log('JavaScript HTTP trigger function processed a request');
 
   const data = {
     firstName: 'Artem',
