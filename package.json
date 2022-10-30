@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "func start ./function",
-    "lint:check": "eslint \"**/*.js\" && prettier --check \"**/*.js\" \"**/*.json\"",
-    "lint:fix": "eslint \"**/*.js\" --fix && prettier --write \"**/*.js\" \"**/*.json\"",
+    "eslint:check": "eslint --ignore-path .gitignore \"**/*.js\"",
+    "eslint:fix": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
+    "prettier:check": "prettier --check \"**/*.js\" \"**/*.json\"",
+    "prettier:fix": "prettier --write \"**/*.js\" \"**/*.json\"",
     "prepare": "husky install"
   },
   "keywords": [],
