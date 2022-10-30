@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint
-        run: npm run lint:check
+        run: npm run eslint:check && npm run prettier:check
       - name: Deploy Azure function
         uses: Azure/functions-action@v1
         with:
