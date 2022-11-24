@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "func start ./function",
-    "serve": "nodemon src/server.js",
+    "start": "nodemon src/server.js",
     "eslint:check": "eslint --ignore-path .gitignore \"**/*.js\"",
     "eslint:fix": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
     "prettier:check": "prettier --check . --ignore-path .gitignore",
