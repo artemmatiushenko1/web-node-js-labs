@@ -47,12 +47,12 @@ class Router {
 
   async #getProcessedRequestData(req) {
     let payload = {};
-    const rawRequestData = await this.#getRawRequestData(req);
 
     if (req.headers['content-type']) {
       const contentType = req.headers['content-type'].split(';').shift();
 
       if (contentTypeHandlers[contentType]) {
+        const rawRequestData = await this.#getRawRequestData(req);
         payload = contentTypeHandlers[contentType](rawRequestData);
       }
     }
