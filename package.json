@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "func start ./function",
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
     "eslint:check": "eslint --ignore-path .gitignore \"**/*.js\"",
     "eslint:fix": "eslint --ignore-path .gitignore \"**/*.js\" --fix",
     "prettier:check": "prettier --check . --ignore-path .gitignore",
@@ -21,6 +22,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-sonarjs": "^0.16.0",
     "husky": "^8.0.1",
+    "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.0.12"
   }
 }
