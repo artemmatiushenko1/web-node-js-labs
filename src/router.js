@@ -1,5 +1,5 @@
 import helpers from './helpers.js';
-import { safeJSON } from './safeJSON.js';
+import { parseXML, safeJSON } from './utils.js';
 
 const contentTypeHandlers = {
   'text/plain': (text) => text,
@@ -7,6 +7,7 @@ const contentTypeHandlers = {
   'application/json': (json) => safeJSON(json, {}),
   'application/x-www-form-urlencoded': (data) =>
     Object.fromEntries(new URLSearchParams(data)),
+  'application/xml': (data) => parseXML(data, {}),
 };
 
 class Router {
