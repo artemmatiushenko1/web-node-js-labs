@@ -5,7 +5,7 @@ const contentTypeHandlers = {
   'text/plain': (text) => text,
   'text/html': (text) => text,
   'application/json': (json) => safeJSON(json, {}),
-  'x-www-form-url-encoded': (data) =>
+  'application/x-www-form-urlencoded': (data) =>
     Object.fromEntries(new URLSearchParams(data)),
 };
 
@@ -77,7 +77,9 @@ class Router {
       });
     } catch (err) {
       res.statusCode = 500;
-      res.end(process.env.NODE_ENV !== 'production' ? err : 'Internal error');
+      res.end(
+        process.env.NODE_ENV !== 'production' ? err : '500 - Internal error'
+      );
     }
   }
 

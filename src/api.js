@@ -3,18 +3,39 @@ import Router from './router.js';
 const router = new Router();
 
 router
-  .get('/todo', (req, res) => {
+  .get('/endpoint', (req, res) => {
+    res.status(200);
+    res.json({ method: req.method, text: 'GET request response example' });
+  })
+  .post('/endpoint', (req, res, { payload }) => {
     res.status(200);
     res.json({
-      todos: [{ id: 1, text: '1 Make simple nodejs server' }],
+      method: req.method,
+      text: 'POST request response example',
+      data: payload,
     });
   })
-  .post('/post', (req, res, { payload }) => {
-    console.log(payload);
-    res.json(payload);
+  .delete('/endpoint', (req, res) => {
+    res.status(200);
+    res.json({
+      method: req.method,
+      text: 'DELETE request response example',
+    });
   })
-  .delete('/delete', (req, res) => {
-    res.json({ data: 'delete' });
+  .patch('/endpoint', (req, res, { payload }) => {
+    res.status(200);
+    res.json({
+      method: req.method,
+      text: 'PATCH request response example',
+      data: payload,
+    });
+  })
+  .options('/endpoint', (req, res) => {
+    res.status(200);
+    res.json({
+      method: req.method,
+      text: 'OPTIONS request response example',
+    });
   });
 
 export default router;

@@ -7,13 +7,17 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(parseInt(process.env.PORT) || 8080);
 
-['SIGTERM', 'SIGINT'].forEach((eventName) => {
-  process.on(eventName, () => {
-    server.close((err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
-    process.exit(0);
+const stop = () => {
+  server.close((err) => {
+    if (err) {
+      console.error(err);
+    }
   });
+  process.exit(0);
+};
+
+process.on('SIGINT', stop).on('SIGTERM', stop);
+
+server.on('clientError', (err, socket) => {
+  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 });
